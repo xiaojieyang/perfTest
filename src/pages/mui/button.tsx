@@ -2,8 +2,9 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 // We need to include the base CSS in the root of
 // the app so all of our components can inherit the styles
-import { Button } from "@neo4j-ndl/react";
+
 import "@neo4j-ndl/base/lib/neo4j-ds-styles.css";
+import Button from '@mui/material/Button';
 
 export default function buttonpage() {
   return (
@@ -18,9 +19,7 @@ export default function buttonpage() {
         <Button 
           className="basicbutton"
           color="success"
-          fill="filled"
-          size="large"
-          type="button"
+          variant='contained'
         >
           test
         </Button>

@@ -6,14 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "perf": "playwright test --project=chromium",  
+    "perf:display": "playwright test --project=chromium --headed"  
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.12.1",
-    "@neo4j-ndl/base": "^1.2.0",
-    "@neo4j-ndl/react": "^1.2.0",
+    "@neo4j-ndl/base": "1.0.0",
+    "@neo4j-ndl/react": "1.0.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",

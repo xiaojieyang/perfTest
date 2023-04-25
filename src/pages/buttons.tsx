@@ -5,20 +5,7 @@ import styles from '@/styles/Home.module.css'
 import { Button } from "@neo4j-ndl/react";
 import "@neo4j-ndl/base/lib/neo4j-ds-styles.css";
 
-
-// import { Button } from '@neo4j-ndl/react';
-
 export default function buttonpage() {
-  // const renderShowMoreButton = () => (
-  //   <Button
-  //     size='small'
-  //     color='primary'
-  //     fill='text'
-  //     type='button'
-  //   >
-  //     a very nie button
-  //   </Button>
-  // )
   return (
     <>
       <Head>
@@ -28,7 +15,33 @@ export default function buttonpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Button className="basicbutton">test</Button>
+        <Button 
+          className="basicbutton-filled"
+          color="success"
+          fill="filled"
+          size="large"
+          type="button"
+        >
+          test
+        </Button>
+        <Button 
+          className="basicbutton-text"
+          color="neutral"
+          fill="text"
+          size="small"
+          type="button"
+        >
+          test
+        </Button>
+        <Button 
+          className="basicbutton-outlined"
+          color="warning"
+          fill="outlined"
+          size="medium"
+          type="submit"
+        >
+          test
+        </Button>
       </main>
     </>
   )
