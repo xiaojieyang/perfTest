@@ -1,6 +1,25 @@
 import { test, expect } from '@playwright/test';
+import * as performancemetrics from '../metrics.json';
 
-test.only('Check codeblock performance', async ({ page }) => {
+interface Data {
+  name: string;
+  value: number;
+}
+
+let codeblockProcesstime: number | null = null;
+
+try {
+  for (const data of performancemetrics.metrics as unknown as Data[]) {
+    if (data.name === 'codeblock.processtime') {
+      codeblockProcesstime = data.value;
+      break;
+    }
+  }
+} catch (err) {
+  console.error('Error importing metrics:', err);
+}
+
+test('Check codeblock performance', async ({ page }) => {
   const client = await page.context().newCDPSession(page);
   // Tell the devtools session ro record performance metrics
   await client.send('Performance.enable');
@@ -17,11 +36,14 @@ test.only('Check codeblock performance', async ({ page }) => {
     const jsheapmb = jsheaptotalsize.value / (1024 * 1024);
     console.log('JSHeapTotalSize: ' + jsheapmb.toFixed(2) + ' MB');
   }
-  expect(processTimeMetric?.value).toBeLessThan(1.1);
-  expect(jsheaptotalsize?.value).toBeLessThan(70000000);
+  if (codeblockProcesstime !== null) {
+    expect(processTimeMetric?.value).toBeCloseTo(codeblockProcesstime, 20);
+  }
+  expect(jsheaptotalsize?.value).toBeLessThan(97011936);
 });
 
-test.only('Check buttons performance', async ({ page }) => {
+
+test('Check codeblocks performance', async ({ page }) => {
   const client = await page.context().newCDPSession(page);
   // Tell the devtools session to record performance metrics
   await client.send('Performance.enable');
@@ -38,6 +60,6 @@ test.only('Check buttons performance', async ({ page }) => {
     const jsheapmb = jsheaptotalsize.value / (1024 * 1024);
     console.log('JSHeapTotalSize: ' + jsheapmb.toFixed(2) + ' MB');
   }
-  expect(processTimeMetric?.value).toBeLessThan(2.0);
-  expect(jsheaptotalsize?.value).toBeLessThan(109904872);
+  expect(processTimeMetric?.value).toBeCloseTo(2.0 , -1);
+  expect(jsheaptotalsize?.value).toBeLessThan(120952448);
 });

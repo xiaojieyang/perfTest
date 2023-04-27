@@ -1,0 +1,25 @@
+{
+  "metrics": [
+    {
+      "name": "codeblock",
+      "processtime": 2,
+      "jsheaptotaltime": 120952448
+    },
+    {
+      "name": "button",
+      "processtime": 0.9,
+      "jsheaptotaltime": 75649792,
+      "amountofnodes": 95
+    },
+    {
+      "name": "table",
+      "processtime": 1,
+      "jsheaptotaltime": 95649792
+    },
+    {
+      "name": "tables",
+      "processtime": 1.5,
+      "jsheaptotaltime": 100000000
+    }
+  ]
+}

@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "perf": "playwright test --project=chromium",  
-    "perf:display": "playwright test --project=chromium --headed"  
+    "perf": "playwright test --project=chromium",
+    "perf:display": "playwright test --project=chromium --headed"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -24,6 +24,7 @@
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.62.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {

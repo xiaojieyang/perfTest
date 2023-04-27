@@ -2,8 +2,13 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 // We need to include the base CSS in the root of
 // the app so all of our components can inherit the styles
+import { PlayCircleIconOutline, DocumentDuplicateIconOutline  } from '@neo4j-ndl/react/icons';
+// import { DocumentDuplicateIconOutline  } from '@neo4j-ndl/react/icons';
+
+
 import { CodeBlock } from "@neo4j-ndl/react";
 import "@neo4j-ndl/base/lib/neo4j-ds-styles.css";
+// import { DocumentDuplicateIconOutline, PlayCircleIconOutline } from '@neo4j-ndl/react/src/icons';
 
 export default function codeblockpage() {
   return (
@@ -20,137 +25,52 @@ export default function codeblockpage() {
           className="basiccodeblock"
           actions={[
             {
+              title: 'copy',
               'aria-label': 'copy',
-              children: <div className="n-text-light-neutral-text-weak" />,
-              onClick: function $a(){},
-              title: 'copy'
+              children: (
+                <DocumentDuplicateIconOutline className="n-text-light-neutral-text-weak" />
+              ),
+              onClick: () => alert('copied'),
             },
             {
+              title: 'run',
               'aria-label': 'run',
-              children: <p className="n-text-primary-50" />,
-              onClick: function $a(){},
-              title: 'run'
-            }
+              children: <PlayCircleIconOutline className="n-text-primary-50" />,
+              onClick: () => alert('run'),
+            },
           ]}
-  code="import { tokens as ndlTokens } from '@neo4j-ndl/base';
-import React, { useState } from 'react';
-import { IconButtonProps } from '../button';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {
-  base16AteliersulphurpoolLight,
-  coy,
-  duotoneLight,
-  ghcolors,
-  prism,
-  solarizedlight,
-  vs,
-} from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { ElementBase } from '../helpers';
-import { LanguageProp } from './languages';
-import { CodeBlockWrapper } from '../_common/CodeBlockWrapper';
-
-export interface CodeBlockProps extends ElementBase<HTMLDivElement> {
-  maxHeight?: number;
-  code: string;
-  // Source for available languages: https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_PRISM.MD
-  language: LanguageProp | 'text';
-  showLineNumbers?: boolean;
-  theme?:
-    | 'vs'
-    | 'base16-ateliersulphurpool.light'
-    | 'coy'
-    | 'duotone-light'
-    | 'ghcolors'
-    | 'prism'
-    | 'solarizedlight';
-  headerTitle?: string | JSX.Element;
-  actions?: IconButtonProps[];
-  disabled?: boolean;
-}
-
-export const CodeBlock = React.forwardRef(function CodeBlock(
-  {
-    maxHeight,
-    code,
-    language,
-    showLineNumbers,
-    theme,
-    headerTitle,
-    actions,
-    disabled,
-  }: CodeBlockProps,
-  ref
-) {
-  const [shouldShowExpandButton, setShouldShowExpandButton] = useState(
-    maxHeight !== undefined
-  );
-
-  const getTheme = () => {
-    switch (theme) {
-      case 'vs':
-        return vs;
-      case 'base16-ateliersulphurpool.light':
-        return base16AteliersulphurpoolLight;
-      case 'coy':
-        return coy;
-      case 'duotone-light':
-        return duotoneLight;
-      case 'ghcolors':
-        return ghcolors;
-      case 'prism':
-        return prism;
-      case 'solarizedlight':
-        return solarizedlight;
-      default:
-        return vs;
-    }
-  };
-
-  return (
-    <CodeBlockWrapper
-      ref={ref}
-      maxHeight={maxHeight}
-      code={code}
-      headerTitle={headerTitle}
-      disabled={disabled}
-      actions={actions}
-      shouldShowExpandButton={shouldShowExpandButton}
-      setShouldShowExpandButton={setShouldShowExpandButton}
-    >
-      <SyntaxHighlighter
-        language={language}
-        style={{
-          ...getTheme(),
-          'pre[class*=&quot;language-&quot;]': {
-            color: ndlTokens.palette.light.neutral.text.default,
-            backgroundColor: ndlTokens.colors.neutral[20],
-            background: ndlTokens.colors.neutral[20],
-            lineHeight: '1',
-            width: '100%',
-            border: 0,
-            padding: `0 calc(0.75em + ${
-              headerTitle === undefined || headerTitle === ''
-                ? (actions?.length || (shouldShowExpandButton ? 1 : 0)) * 36
-                : (shouldShowExpandButton ? 1 : 0) * 36
-            }px) 0.75em 0.75em`,
-            overflowX: 'auto',
-            overflowY: 'auto',
-          },
-        }}
-        // Turn on 'showLineNumbers' & 'wrapLongLines' at the same time, the display is wrong
-        // https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues/402
-        // wrapLongLines
-        codeTagProps={{ className: 'n-code' }}
-        showLineNumbers={showLineNumbers}
-      >
-        {code}
-      </SyntaxHighlighter>
-    </CodeBlockWrapper>
-  );
-});"
-  headerTitle="Header"
-  language="typescript"
-  maxHeight={320}
+          code = {`        <CodeBlock
+          className="basiccodeblock"
+          actions={[
+            {
+              title: 'copy',
+              'aria-label': 'copy',
+              children: (
+                <DocumentDuplicateIconOutline className="n-text-light-neutral-text-weak" />
+              ),
+              onClick: () => alert('copied'),
+            },
+            {
+              title: 'run',
+              'aria-label': 'run',
+              children: <PlayCircleIconOutline className="n-text-primary-50" />,
+              onClick: () => alert('run'),
+            },
+          ]}
+          code = {"firstdfdmkdfgnjfgnfjgnfjgnjnjijnhjkbhjlblhjbhjblk
+second
+third"}
+          
+          headerTitle="Header"
+          language="typescript"
+          maxHeight={320}
+          showLineNumbers={true}
+/>`}
+          
+          headerTitle="Header"
+          language="typescript"
+          maxHeight={320}
+          showLineNumbers={true}
 />
         </div>
       </main>
