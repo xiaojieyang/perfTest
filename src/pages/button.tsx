@@ -16,6 +16,7 @@ export default function buttonpage() {
       </Head>
       <main className={styles.main}>
         <Button 
+          aria-label="test button"
           className="basicbutton"
           color="success"
           fill="filled"

@@ -17,9 +17,11 @@ export default function bannerpage() {
       <main className={styles.main}>
         <Banner
           closeable
+          icon
+          aria-label='Banner'
           type="warning"
-          title="Testing the Banner"
-          description="Banner can have a description"
+          // title="Testing the Banner"
+          // description="Banner can have a description"
           onClose={function $a(){}}
           className='kickAsBanner'
         />

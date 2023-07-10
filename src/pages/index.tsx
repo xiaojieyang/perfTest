@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/report.module.scss'
-import results from '../../results.json'
+// import results from '../../results.json'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,48 +16,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>Performance testing the shiiiit out for ndl.</h1>
+        <h1 className={styles.title}>Accessibility testing the ndl project!</h1>
         <p className={styles.description}>We are trying the bust ndl  </p>
         <div>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Component</th>
-              <th>Metric</th>
-              <th>Ndl</th>
-              <th>MUI</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{results.suites[0].title}</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-          </tbody>
-        </table>
-
-          
+          <ul>
+            <li className={styles.list}>
+              <a className={styles.link} href="/banner">Banner</a>
+              <a className={styles.link} href="/button">Button</a>
+              <a className={styles.link} href="/checkbox">Checkbox</a>
+              <a className={styles.link} href="/codeblock">Codeblock</a>
+              <a className={styles.link} href="/dialog">Dialog</a>
+              <a className={styles.link} href="/label">Label</a>
+              <a className={styles.link} href="/modal">Modal</a>
+              <a className={styles.link} href="/sitenavigation">Side Navigation</a>
+              <a className={styles.link} href="/spinner">Progress Spinner</a>
+              <a className={styles.link} href="/textinput">Text input</a>
+              <a className={styles.link} href="/tooltip">Tooltip</a>
+            </li>
+          </ul>         
         </div>
       </main>
     </>

@@ -9,4 +9,12 @@
   .title {
     padding: 20px;
   }
+  .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    .link {
+      
+    }
+  }
 }

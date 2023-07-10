@@ -2,7 +2,8 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 // We need to include the base CSS in the root of
 // the app so all of our components can inherit the styles
-import { Button } from "@neo4j-ndl/react";
+import { Button, IconButton } from "@neo4j-ndl/react";
+import { HeartIconOutline  } from '@neo4j-ndl/react/icons';
 import "@neo4j-ndl/base/lib/neo4j-ds-styles.css";
 
 export default function buttonpage() {
@@ -33,7 +34,8 @@ export default function buttonpage() {
         >
           test
         </Button>
-        <Button 
+        <Button
+          arial-label="Search Icon"
           className="basicbutton-outlined"
           color="warning"
           fill="outlined"
@@ -42,6 +44,9 @@ export default function buttonpage() {
         >
           test
         </Button>
+        <IconButton arial-label="Search Icon" className='test' clean size='small'>
+          <HeartIconOutline />
+        </IconButton>
       </main>
     </>
   )
