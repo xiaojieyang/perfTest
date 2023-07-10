@@ -2,10 +2,10 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 // We need to include the base CSS in the root of
 // the app so all of our components can inherit the styles
-import { Button } from "@neo4j-ndl/react";
+import { Tooltip } from "@neo4j-ndl/react";
 import "@neo4j-ndl/base/lib/neo4j-ds-styles.css";
 
-export default function buttonpage() {
+export default function tooltippage() {
   return (
     <>
       <Head>
@@ -15,16 +15,14 @@ export default function buttonpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Button 
-          aria-label="test button"
-          className="basicbutton"
-          color="success"
-          fill="filled"
-          size="large"
-          type="button"
+        <Tooltip
+          arrowPosition="bottom"
+          style={{
+            maxWidth: '150px'
+          }}
         >
-          test
-        </Button>
+          Some useful extra information about a thing
+        </Tooltip>
       </main>
     </>
   )
