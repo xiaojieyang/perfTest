@@ -15,6 +15,7 @@ export default function tooltippage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>Tooltip</h1>
         <Tooltip
           arrowPosition="bottom"
           style={{

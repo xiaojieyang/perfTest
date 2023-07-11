@@ -15,6 +15,7 @@ export default function tooltippage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>Text Input</h1>
         <TextInput
           helpText="Friendly help text"
           label="Label"

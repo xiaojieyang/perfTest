@@ -25,6 +25,7 @@ export default function labelpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+      <h1>Modal</h1>
       <div
         className="n-flex n-flex-col n-items-center n-justify-center"
         style={{

@@ -19,6 +19,7 @@ export default function dialogpage() {
 
     return (
     <main className={styles.main}>
+      <h1>Dialog</h1>
       <div className="n-flex n-flex-col n-items-center n-justify-center" style={{ height: '400px' }}>
         <React.Fragment key=".0">
           <div className="n-flex n-justify-center">

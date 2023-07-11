@@ -15,6 +15,7 @@ export default function buttonpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>Button</h1>
         <Button 
           aria-label="test button"
           className="basicbutton"
