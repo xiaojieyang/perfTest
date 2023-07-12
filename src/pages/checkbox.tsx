@@ -15,6 +15,7 @@ export default function checkboxpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>CheckBox</h1>
         <Checkbox label="Checkbox label"/>
       </main>
     </>

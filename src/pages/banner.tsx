@@ -15,6 +15,7 @@ export default function bannerpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>Banner</h1>
         <Banner
           closeable
           icon
