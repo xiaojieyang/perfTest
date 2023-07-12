@@ -26,6 +26,7 @@ export default function Sidenavigationpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>Side Navigation</h1>
         <div
           style={{
             display: 'flex',

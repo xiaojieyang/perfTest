@@ -20,6 +20,7 @@ export default function codeblockpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>CodeBlocker</h1>
         <div className={styles.codeblockwrapper}>
         <CodeBlock
           className="basiccodeblock"

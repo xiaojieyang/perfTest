@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "perf": "playwright test --project=chromium",
-    "perf:display": "playwright test --project=chromium --headed"
+    "perf:display": "playwright test --project=chromium --headed",
+    "a11y": "playwright test --project=chromium a11y.spec.ts --workers 1"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -25,9 +26,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.63.6",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "lodash": "4.17.21"
   },
   "devDependencies": {
-    "@playwright/test": "^1.32.3"
+    "@playwright/test": "^1.32.3",
+    "@axe-core/playwright": "4.7.3"
   }
 }

@@ -15,18 +15,19 @@ export default function labelpage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <GraphLabel type="node">
-        Label
-      </GraphLabel>
-      <GraphLabel type="node">
-        Label
-      </GraphLabel>
-      <GraphLabel type="relationship">
-        Label
-      </GraphLabel>
-      <GraphLabel type="propertyKey">
-        Label
-      </GraphLabel>
+        <h1>Labels</h1>
+        <GraphLabel type="node">
+          Label
+        </GraphLabel>
+        <GraphLabel type="node">
+          Label
+        </GraphLabel>
+        <GraphLabel type="relationship">
+          Label
+        </GraphLabel>
+        <GraphLabel type="propertyKey">
+          Label
+        </GraphLabel>
       </main>
     </>
   )
