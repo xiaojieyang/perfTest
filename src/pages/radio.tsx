@@ -15,6 +15,7 @@ export default function radiopage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <h1>Radio</h1>
         <Radio label="Radio label" />
         <Radio
           aria-label="example aria label"

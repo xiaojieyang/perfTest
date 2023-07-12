@@ -28,6 +28,7 @@ export default function Home() {
               <a className={styles.link} href="/dialog">Dialog</a>
               <a className={styles.link} href="/label">Label</a>
               <a className={styles.link} href="/modal">Modal</a>
+              <a className={styles.link} href="/radio">Radio</a>
               <a className={styles.link} href="/sitenavigation">Side Navigation</a>
               <a className={styles.link} href="/spinner">Progress Spinner</a>
               <a className={styles.link} href="/textinput">Text input</a>
